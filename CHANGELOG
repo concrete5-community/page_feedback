@@ -1,0 +1,92 @@
+0.9.15
+- Fix check for 'exclude paths'.
+
+0.9.14
+- Up minimum version compatibility to 8.3.1 for captcha interface.
+- Fix if recaptcha pkg doesn't exist.
+
+0.9.13
+- Fix to make it work with ExchangeCore reCAPTCHA. (caused some problems because the form is loaded via AJAX)
+- Add link to recaptcha add-on from edit form page.
+
+0.9.12
+- Add setting to enable 'Accept terms of use' checkbox. (GDPR)
+- Add setting to control the text next to the checkbox.
+- Add setting to use an introduction text that is being shown before the form.
+- Autofill email address if user is logged in.
+
+0.9.11
+- Replace regexes with fnmatch.
+- Add 'Save and Close' button.
+- Check for banned IPs before submitting the form.
+- Make sure exceptions are shown to the visitor.
+- Use anti spam library (if installed) to check submitted forms.
+- Add form setting to enable a captcha field.
+- Fix countdown bug (clearInterval).
+- Make autoclose / countdown configurable per form.
+
+0.9.10
+- Improve on_start method and work with on_page_view event.
+- Prevent calling booter multiple times.
+- Try / catch errTo show / hide only on the home page)ors in the regexes and log them.
+- Add styling to email input field for when Bootstrap isn't used.
+- Remove (now) unused findByRequest method.
+
+0.9.9
+- Automatically close dialog in 3 seconds after submitting.
+- Add top margin to 'Close' button in thanks dialog.
+
+0.9.8
+- Improve translations.
+
+0.9.7
+- Add setting to make email field mandatory (or not).
+- Toggle field visibility based on 'Enable email field'.
+- Only use 'Reply To' if email address is not empty.
+- Show asterisk next to email field only if field is required.
+
+0.9.6
+- Add setting to exclude form on a page based on a regular expression.
+- Align 'Send' to the right.
+- Add wrapper div to buttons.
+- Use flex box to align buttons.
+
+0.9.5
+- Use 'Default' as the default form name.
+- Add setting to enable email field.
+- Add asterisks (*) to form.
+- Make sure 'email' field is shown, if setting is enabled.
+- Fix unused 'formMatcher' property via DI.
+- Make sure LoadForm loads the correct form based on the page id.
+- Translate 'Send' submit label.
+- Make sure 'ReplyTo' is used when the form requires an email address.
+- Align form dialog buttons differently.
+
+0.9.4
+- Allow view files to be overridden easily.
+- Remove unused import.
+
+0.9.3
+- Point post install link to add form page.
+- Add autofocus on name field.
+- Split form settings in basic and advanced.
+- Remove unused CSS file.
+- Extract logic to a Service class.
+- Add administrator email to placeholder.
+- Change 'E-mail' to 'Email'.
+- Create setting to specify which stylesheet should be loaded.
+- Create 'generic' and 'bootstrap' stylesheets.
+- Remove unused getPageID method.
+- Rename / Refactor form 'theme' to form 'type'.
+- Remove 'theme' / 'type' select field, as there is currently only just one.
+
+0.9.2
+- Fix an 'was not found in the chain configured namespaces' error.
+- Remove table on uninstall.
+
+0.9.1
+- Make sure errors in AJAX call are displayed to user.
+- Make sure the path to the page is visible in the email.
+
+0.9.0
+- Initial PRB submission.

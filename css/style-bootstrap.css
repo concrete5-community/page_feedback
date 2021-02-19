@@ -1,0 +1,32 @@
+.page-feedback-button,
+.page-feedback-button:visited,
+.page-feedback-button:focus {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    padding: 10px 15px;
+    background-color: #0c6;
+    border-color: #4cae4c;
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-feedback-button:hover {
+    background-color: #00994d;
+    border-color: #398439;
+    text-decoration: none;
+    color: #fff;
+}
+
+.page-feedback-form {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+}
+
+.page-feedback-form-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
