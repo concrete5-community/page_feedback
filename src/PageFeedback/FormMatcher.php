@@ -3,10 +3,9 @@
 namespace A3020\PageFeedback;
 
 use A3020\PageFeedback\Entity\Form;
-use Concrete\Core\Http\Request;
-use Concrete\Core\Logging\Logger;
 use Concrete\Core\Page\Page;
 use Doctrine\ORM\EntityManager;
+use Psr\Log\LoggerInterface;
 use Throwable;
 
 class FormMatcher
@@ -17,11 +16,11 @@ class FormMatcher
     private $entityManager;
 
     /**
-     * @var Logger
+     * @var \Psr\Log\LoggerInterface
      */
     private $logger;
 
-    public function __construct(EntityManager $entityManager, Logger $logger)
+    public function __construct(EntityManager $entityManager, LoggerInterface $logger)
     {
         $this->entityManager = $entityManager;
         $this->logger = $logger;
@@ -77,7 +76,7 @@ class FormMatcher
 
             return true;
         } catch (Throwable $e) {
-            $this->logger->addDebug(
+            $this->logger->debug(
                 'Page Feedback, form (' . $form->getName() . ') gives an error: '
                 . $e->getMessage()
             );

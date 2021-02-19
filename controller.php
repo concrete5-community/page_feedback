@@ -17,7 +17,7 @@ final class Controller extends Package implements ProviderAggregateInterface
 {
     protected $pkgHandle = 'page_feedback';
     protected $appVersionRequired = '8.3.1';
-    protected $pkgVersion = '1.0.0';
+    protected $pkgVersion = '1.0.1';
     protected $pkgAutoloaderRegistries = [
         'src/PageFeedback' => '\A3020\PageFeedback',
     ];
